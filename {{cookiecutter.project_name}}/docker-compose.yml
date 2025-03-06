@@ -3,5 +3,6 @@ services:
   app:
     image: {{ cookiecutter.org_name }}/{{ cookiecutter.project_name }}:{{ cookiecutter.deploy_image_version }}
     container_name: {{ cookiecutter.project_name }}
+    restart: unless-stopped
     env_file:
       - .env
